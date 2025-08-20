@@ -1,0 +1,24 @@
+{
+  "Server" : {
+    "Port": 443,
+    "Threads": 10
+  },
+  "Paths" : {
+    "DatabasePath": "UsersDatabase.db",
+    "LogFilePath": "../logs/ServerLogs.txt",
+    "CertificatePath": "../certificate/certificate.pem",
+    "PrivateKeyPath" : "../certificate/privateKey.pem"
+  },
+  "Security" : {
+    "PasswordHashing": {
+      "Salt" : "SomeSalt",
+      "Iterations" : 1500,
+      "HashLength" : 32
+    },
+    "Jwt": {
+      "Secret": "mzbbiqLm3xojeo44OOrRt9KBl7hFxFCTrGpDAfFTv68=",
+      "AccesTokenDuration" : 600,
+      "RefreshTokenDuration": 604800
+    }
+  }
+}
